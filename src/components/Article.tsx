@@ -1,8 +1,12 @@
-function Article() {
+import { IBlogProps } from "@/app/blogs/page"
+
+function Article({title, content, author, date}: IBlogProps) {
     return (
-        <div className="shadow dark:shadow-emerald-300 p-4 rounded-2xl">
-            <h2 className="mb-4">title</h2>
-            <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, laboriosam dolores cumque nobis explicabo molestias ea consectetur impedit modi exercitationem. </p>
+        <div className="shadow dark:shadow-emerald-300 p-4 rounded-2xl cursor-pointer">
+            <h2 className="mb-4">{title}</h2>
+            <p className="text-justify">{content}</p>
+            <p className="text-gray-500">{author}</p>
+            <p className="text-gray-500">{date}</p>
         </div>
     )
 }
