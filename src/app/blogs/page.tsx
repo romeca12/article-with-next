@@ -13,7 +13,7 @@ export type IBlogProps = {
 
 async function Blogs() {
   const { data } = await axios("http://localhost:8000/articles");
-  console.log(data[0])
+  // console.log(data[0])
 
   return (
     <Container>
@@ -25,13 +25,6 @@ async function Blogs() {
           <Link key={article.id} href={`/blogs/${article.id}`}>
             <Article key={article.id} {...article} />
           </Link>
-          // <Article
-          //   key={article.id}
-          //   title={article.title}
-          //   content={article.content}
-          //   author={article.author}
-          //   date={article.date}
-          // />
         ))}
       </div>
     </Container>

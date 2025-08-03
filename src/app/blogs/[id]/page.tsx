@@ -16,9 +16,11 @@ async function page(props: IArticleProps) {
   return (
     <Container>
       <h1>single post</h1>
-      <div>
+      <div className="mt-4">
         <h2>{data.title}</h2>
         <p>{data.content}</p>
+        <p>{data.author}</p>
+        <p>{data.date}</p>
       </div>
     </Container>
   )
